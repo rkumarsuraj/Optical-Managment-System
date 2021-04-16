@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lenskart SignUp</title>
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link href="css/mdb.css" rel="stylesheet">
+		<!-- Your custom styles (optional) -->
+		<liknk href="css/style.css" rel="stylesheet">
+
+		</head>
+		<body style="background: url('images/raw2.png')">
+			<div style="width: 400px; margin:50px auto;">
+				<!-- Default form register -->
+				<form class="text-center border border-light p-5" action="php/register.php" method="POST">
+					<a href="index.html"><img src="images/logo.svg" width=180 height=80 alt="Lenskart Logo" style="margin-bottom: 24px"></a>
+					<p class="h4 mb-4" style="color: #fff">Sign up</p>
+
+					<div class="form-row mb-4">
+						<div class="col">
+							<input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Name" name = "name" required>
+						</div>
+					</div>
+					<!-- Phone -->
+					<input type="tel" name="phno" class="form-control mb-4" placeholder="Mobile"
+					pattern="[789][0-9]{9}" required>
+					<!-- E-mail -->
+					<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="email" placeholder="E-mail" required>
+					<!-- Password -->
+					<input type="password" id="defaultRegisterFormPassword" name="pass" class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+					<!-- confirm password -->
+					<input type="password" id="defaultRegisterFormPassword" name = "cnf_pass" class="form-control mb-4" 
+					placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+					<button class="btn btn-danger my-4 btn-block" type="submit">Sign Up</button>
+					<p>Already a member?
+						<a href="index.html" style="color: #fff">Sign In</a>
+					</p>
+				</form>
+			</div>
+		</body>
+		
+	</html>

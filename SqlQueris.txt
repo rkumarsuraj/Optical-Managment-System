@@ -1,0 +1,68 @@
+CREATE TABLE Addresses(
+    AddressID INT(4) NOT NULL AUTO_INCREMENT,
+    Line1 VARCHAR(100),
+    Line2 VARCHAR(100),
+    City VARCHAR(50),
+    Zipcode int(6),
+    State VARCHAR(50),
+    primary key (AddressID)
+);
+
+CREATE TABLE Customers (
+  CustomerID INT(4) NOT NULL AUTO_INCREMENT,
+  Name VARCHAR(50),
+  AddressID INT(4),
+  Phone BIGINT(10),
+  RightEyeSight DECIMAL(3,2),
+  LeftEyeSight DECIMAL(3,2),
+  EmailID VARCHAR(50),
+  Password VARCHAR(16),
+  PRIMARY KEY (CustomerID),
+  FOREIGN KEY (AddressID) REFERENCES Addresses(AddressID)
+);
+
+CREATE TABLE Glasses(
+    GlassCode INT(4) NOT NULL,
+    GlassType VARCHAR(20),
+    GlassBrand VARCHAR(20),
+    Price INTEGER(5),
+    PRIMARY KEY (GlassCode)
+);
+
+CREATE TABLE Frames(
+    FrameCode INT(4) NOT NULL ,
+    FrameType VARCHAR(20),
+    FrameShape VARCHAR(20),
+    FrameBrand VARCHAR(20),
+    Price INTEGER(5),
+    PRIMARY KEY (FrameCode)
+);
+create table Branch(
+    BranchID INT(4) NOT NULL,
+    BranchName VARCHAR(50),
+    AddressID INT(4) ,
+    PRIMARY KEY (BranchID),
+    FOREIGN KEY (AddressID) REFERENCES Addresses(AddressID)
+);
+
+
+create table Orders(
+    OrderID INT(4) NOT NULL AUTO_INCREMENT,
+    CustomerID INT(4),
+    BranchID INT(4),
+    ProductCode INT(4),
+    OrderDate Date,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (BranchID) REFERENCES  Branch(BranchID)
+                   
+);
+
+
+alter table customers auto_increment = 1000;
+alter table branch auto_increment = 2000;
+alter table addresses auto_increment = 3000;
+alter table frames auto_increment = 4000;
+alter table glasses auto_increment = 5000;
+alter table orders auto_increment = 6000;
+

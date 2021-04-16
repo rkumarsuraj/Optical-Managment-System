@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LensKart</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  
+  <body style="background:url('images/raw2.png');">
+    <!-- Start your project here-->
+    <div class="container">
+      <nav class="navbar" style="height: auto;">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.svg" width=350 height=120 alt="LensKart Logo">
+        </a>
+      </nav>
+      
+      <div style="width: 400px; margin:8px 0;">
+        <!-- Default form login -->
+        <form class="text-center border border-light p-5" action="php/login.php" method="POST">
+          <p class="h4 mb-4" style="color: #fff">Sign in</p>
+          <!-- Email -->
+          <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+          <!-- Password -->
+          <input type="password" name="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+          <!-- Sign in button -->
+          <button class="btn btn-info btn-block my-4" type="submit" name="user_login">Sign in</button>
+          <!-- Register -->
+          <p>Not a member?
+            <a href="signup.html" style="color: #fff">Register</a>
+          </p>
+
+          <p>
+            <a href="admin_login.php" style="color: #fff">Admin Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+  </body>
+</html>
